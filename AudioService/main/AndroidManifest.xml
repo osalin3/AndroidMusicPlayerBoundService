@@ -1,0 +1,20 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ohsal.audioservice">
+
+    <permission android:name="com.example.ohsal.audioserver.server" >
+    </permission>
+
+    <application
+        android:allowBackup="false">
+
+        <service
+            android:name=".AudioServiceImpl"
+            android:exported="true"
+            android:permission="com.example.ohsal.audioserver.server" >
+            <intent-filter>
+                <action android:name="com.example.ohsal.audioservice.service.AudioServiceAIDL" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
